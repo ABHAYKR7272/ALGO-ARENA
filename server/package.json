@@ -1,0 +1,22 @@
+{
+  "name": "algo-arena-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev":   "nodemon src/index.js",
+    "start": "node src/index.js",
+    "build:cpp": "cd cpp/engine && g++ -O2 -std=c++17 -o runner runner.cpp ../algorithms/bubble_sort.cpp ../algorithms/merge_sort.cpp ../algorithms/bfs.cpp ../algorithms/dfs.cpp ../algorithms/dijkstra.cpp && echo 'C++ engine built'"
+  },
+  "dependencies": {
+    "express":        "^4.18.3",
+    "socket.io":      "^4.7.4",
+    "mongoose":       "^8.2.1",
+    "cors":           "^2.8.5",
+    "dotenv":         "^16.4.5",
+    "jsonwebtoken":   "^9.0.2",
+    "groq-sdk":       "^0.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
